@@ -15,15 +15,15 @@ I've tried to make this script as flexible as possible sticking to give the user
 - **speed_promised**: This is the speed _promised_ to you by your ISP.  If your package is 60mbit down simply enter `speed_promised = 60`.
 - **warning_threshold**: Because we don't necessarily want to tweet if your speeds test slightly under what your were _promised_ we define a threshold percentage in decimal format.  To warn when your speeds are testing at or below 40% of what you expect define `warning_threshold = 0.4`.
 - **logging**: There are three options for logging available _No Logging_, _Log to MYSQL Database_ and _Log to CSV_ . We use a numerical format to determine logging where `0` = No Logging, `1` = MySQL and `2` = CSV.
-- **twitter_enabled**: This is a True/False Boolean to determine if we send tweets at all.  It defaults to True, however if you don't wish to send tweets and only want to capture data set `Twitter = False`.
+- **twitter_enabled**: This is a Boolean to determine if we send tweets at all.  It defaults to True, however if you don't wish to send tweets and only want to capture data set `Twitter = False`.
 
 
 ##File location settings:
 Define desired file locations for where your speedtest-cli is installed and where you wish your csv and error file logging to occur.  I.e. if your speedtest-cli is installed in /usr/local/bin set speedtest_location='/usr/local/bin/'
 
 - **speedtest_location**: Set the absolute path to where speedtest-cli is installed on your system.  For example if it's in /usr/local/bin/speedtest-cli set `speedtest_location='/usr/local/bin'`
-- **csv_file**: Determine where and what filename to log to csv file.  Typically in the homedir, but can be whereever you like.  Variable expects absolute path *and* filename _i.e._ `csv_file='/home/pi/speedtestcomplainer/speedtest_data.csv`.
-- **error_file**: Determine where to log errors to.  Any errors will be output to the screen, but also to the `error_file` so automated run errors will be captured.   Variable expects absolute path *and* filename _i.e._ `error_file='/home/pi/speedtestcomplainer/error.log`.
+- **csv_file**: Determine where and what filename to log to csv file.  Typically in the homedir, but can be whereever you like.  Variable expects absolute path *and* filename _i.e._ `csv_file='/home/pi/speedtestcomplainer/speedtest_data.csv'`.
+- **error_file**: Determine where to log errors to.  Any errors will be output to the screen, but also to the `error_file` so automated run errors will be captured.   Variable expects absolute path *and* filename _i.e._ `error_file='/home/pi/speedtestcomplainer/error.log'`.
 
 ##Credentials:
 We store both MySQL connector settings and twitter oAuth2 credentials in a simple dictionary list.
