@@ -2,6 +2,7 @@
 A python app that will run a speedtest on your internet connection, store the results in a database or csv file and tweet a complaint to your ISP.  Designed and tested to run on a raspberry pi, but should run on any 'nix distro capable of supporting python3
 
 Based on u/AlekseyP's original work in https://www.reddit.com/r/technology/comments/43fi39/i_set_up_my_raspberry_pi_to_automatically_tweet/
+and jchieppa's fork here: https://github.com/jchieppa/speedtest-complainer
 
 # Requirements
 
