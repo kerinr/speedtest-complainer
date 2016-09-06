@@ -48,6 +48,6 @@ We store both MySQL connector settings and twitter oAuth2 credentials in a simpl
 On line 80 of the script edit the details in the `tweet` variable for your ISP and desired @mentions, hashtags and locations.  *Remember to keep the total length to no more than 140 char*.
 
 ### Cron Job
-Currently the script must be called manually or via a cronjob.  On my pi I run it via cron every 15min
+Currently the script must be called manually or via a cronjob.  On my pi I run it via cron every 15min (I am using python 2.7, not 3)
 
-`*/15 * * * * /usr/bin/python3 /home/pi/speedtest_complainer/speedtestcomplainer.py > /dev/null 2>&1`
+`*/15 * * * * /usr/bin/python /home/pi/speedtest_complainer/speedtestcomplainer.py > /dev/null 2>&1`
